@@ -1,0 +1,10 @@
+1,2,1,2,1,1,1
+1
+url,scheme,host,path,query,fragment
+2
+https://www.google.com/search?q=hello,https,www.google.com,/search,q=hello, 
+1
+https://en.m.wikipedia.org/wiki/Extended_Backus–Naur_form,https,en.m.wikipedia.org,/wiki/Extended_Backus–Naur_form, , 
+1
+https://game8.co/games/Minecraft/archives/377719#hm_3,https,game8.co,/games/Minecraft/archives/377719, ,hm_3
+1
