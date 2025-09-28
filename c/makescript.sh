@@ -8,6 +8,17 @@ SYSROOT="${SYSROOT:-/usr}"
 # set to lib64 if you get an error
 LIBDIR="${LIBDIR:-lib}"
 
+# we all love clang, but if you don't have it, set it to gcc or something
+CC="${CC:-clang}"
+
+case "$(uname -s)" in
+ Linux*) libext="so";;
+ Darwin*) libext="dylib";;
+ CYGWIN*|MINGW*|MSYS*) libext="dll";;
+ # fallback to so
+ *) libext="so";;
+esac
+
 if [ "$#" -ne 1 ]; then
 
  flags="-Wall -Wpedantic -Werror -O2"
@@ -15,11 +26,11 @@ if [ "$#" -ne 1 ]; then
  clang dispcsvf.c -o dispcsvf.o -fPIC $flags -c
  clang csv2csvf.c -o csv2csvf.o -fPIC $flags -c
 
- clang -shared *.o -o libcsvf.so
+ clang -shared *.o -o libcsvf.$libext
 
  rm *.o
 
- mv libcsvf.so $SYSROOT/$LIBDIR
+ mv libcsvf.$libext $SYSROOT/$LIBDIR
 
  cp libcsvf.h $SYSROOT/include
 
@@ -36,7 +47,7 @@ else
 
  if [ "$1" = "uninstall" ]; then
 
-  rm -f $SYSROOT/$LIBDIR/libcsvf.so
+  rm -f $SYSROOT/$LIBDIR/libcsvf.$libext
 
   rm -f $SYSROOT/include/libcsvf.h
 
