@@ -3,6 +3,8 @@ CSVF is a file format similar to CSV that you can view in a terminal.
 
 [view specification](https://github.com/matthew-james-brewer/csvf/blob/main/csvf-0.0.1.md)
 
+![screenshot](screenshot.png)
+
 ## using the tools
 
 Before you can use anything in the repository, you must clone in and switch to the created directory (`git clone https://github.com/matthew-james-brewer/csvf.git; cd csvf`).
