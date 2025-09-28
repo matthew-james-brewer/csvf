@@ -23,10 +23,10 @@ if [ "$#" -ne 1 ]; then
 
  flags="-Wall -Wpedantic -Werror -O2"
 
- clang dispcsvf.c -o dispcsvf.o -fPIC $flags -c
- clang csv2csvf.c -o csv2csvf.o -fPIC $flags -c
+ $CC dispcsvf.c -o dispcsvf.o -fPIC $flags -c
+ $CC csv2csvf.c -o csv2csvf.o -fPIC $flags -c
 
- clang -shared *.o -o libcsvf.$libext
+ $CC -shared *.o -o libcsvf.$libext
 
  rm *.o
 
@@ -34,8 +34,8 @@ if [ "$#" -ne 1 ]; then
 
  cp libcsvf.h $SYSROOT/include
 
- clang csv2csvf-cmd.c -o csv2csvf $flags -lcsvf
- clang dispcsvf-cmd.c -o dispcsvf $flags -lcsvf
+ $CC csv2csvf-cmd.c -o csv2csvf $flags -lcsvf
+ $CC dispcsvf-cmd.c -o dispcsvf $flags -lcsvf
 
  mv csv2csvf dispcsvf $SYSROOT/bin
 
