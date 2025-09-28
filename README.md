@@ -14,6 +14,7 @@ To use the C tools, you must go into the c directory (`cd c`) and run the instal
  * $SYSROOT/include/libcsvf.h
  * $SYSROOT/bin/csv2csvf
  * $SYSROOT/bin/dispcsvf
+
 By default, $SYSROOT is `/usr`, and $LIBDIR is `lib`. You can change them to fit your system (ie. `export SYSROOT=/usr/local` and `export LIBDIR=lib64`).
 
 After that, you can convert csv files to csvf files (`csv2csvf x.csv x.csvf`) and display csvf files (`dispcsvf x.csvf`). You can also create C programs that use libcsvf. See the *-cmd.c files for demonstration of use. Compile with `-lcsvf` and put `#include <libcsvf.h>` at the top of your file.
