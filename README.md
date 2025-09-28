@@ -32,3 +32,17 @@ Then, you can display csvf files (`java DispTable x.csvf` in the same directory 
 ### js
 
 To use the Javascript tools, you must create something that uses them. Some examples are provided in the `examples` folder.
+
+## demo output
+
+```
+┌──────────┬──────┬─────────────────────────┐
+│expression│result│note                     │
+╞══════════╪══════╪═════════════════════════╡
+│5+7       │12    │it's simple math         │
+├──────────┼──────┼─────────────────────────┤
+│41*62     │2542  │multiplication isn't hard│
+├──────────┼──────┼─────────────────────────┤
+│6480/60   │108   │just use long division   │
+└──────────┴──────┴─────────────────────────┘
+```
