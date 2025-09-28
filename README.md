@@ -1,7 +1,7 @@
 # csvf
 CSVF is a file format similar to CSV that you can view in a terminal.
 
-[view specification](https://github.com/matthew-james-brewer/csvf/blob/main/csvf-0.0.1.md)
+[view specification](https://github.com/matthew-james-brewer/csvf/blob/master/csvf-0.0.1.md)
 
 ![screenshot](https://github.com/matthew-james-brewer/csvf/blob/master/screenshot.png?raw=true)
 
