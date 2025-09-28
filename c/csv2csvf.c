@@ -50,7 +50,7 @@ void csvToCsvf(char* inputName, char* outputName) {
    fputs("1\n", output);
    fputs(line, output);
   }
-  fputs("\n1", output);
+  fputs("1", output);
   
   fclose(csv);
   fclose(output);
