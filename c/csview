@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+csv2csvf $1 /tmp/temp.csvf
+dispcsvf /tmp/temp.csvf
+rm /tmp/temp.csvf

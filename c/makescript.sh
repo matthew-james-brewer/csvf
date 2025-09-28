@@ -28,6 +28,10 @@ if [ "$#" -ne 1 ]; then
 
  mv csv2csvf dispcsvf $SYSROOT/bin
 
+ cp csview $SYSROOT/bin
+
+ chmod +x $SYSROOT/bin/csview
+
 else
 
  if [ "$1" = "uninstall" ]; then
@@ -37,6 +41,8 @@ else
   rm -f $SYSROOT/include/libcsvf.h
 
   rm -f $SYSROOT/bin/csv2csvf $SYSROOT/bin/dispcsvf
+
+  rm -f $SYSROOT/bin/csview
 
  fi
 
