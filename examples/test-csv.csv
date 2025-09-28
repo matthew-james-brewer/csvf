@@ -1,0 +1,7 @@
+datetime,size,name
+Sep 27 19:42,285,csv2csvf-cmd.c
+Sep 27 19:42,1093,csv2csvf.c
+Sep 27 19:42,411,dispcsvf-cmd.c
+Sep 27 19:42,7117,dispcsvf.c
+Sep 27 19:42,181,libcsvf.h
+Sep 27 19:42,901,makescript.sh
