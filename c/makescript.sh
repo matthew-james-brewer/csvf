@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-# Sorry y'all, I don't really want to bother with cmake or makefile or anything
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! #
+#                                     #
+# DO NOT USE, CMAKE VERSION AVAILABLE #
+#                                     #
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! #
 
 # run `export SYSROOT=/usr/local` if you want to use the local development environment, or set it to another value for other use cases
 SYSROOT="${SYSROOT:-/usr}"

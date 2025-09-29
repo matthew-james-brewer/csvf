@@ -11,14 +11,13 @@ Before you can use anything in the repository, you must clone in and switch to t
 
 ### c
 
-To use the C tools, you must go into the c directory (`cd c`) and run the install script (`bash makescript.sh`). It creates 5 files:
- * $SYSROOT/$LIBDIR/libcsvf.so
- * $SYSROOT/include/libcsvf.h
- * $SYSROOT/bin/csv2csvf
- * $SYSROOT/bin/dispcsvf
- * $SYSROOT/bin/csview
+To use the C tools, you must go into the c directory (`cd c`) and run cmake (`mkdir build; cmake -B build; cmake --build build; cmake --install build`). It creates 5 files:
 
-By default, $SYSROOT is `/usr`, and $LIBDIR is `lib`. You can change them to fit your system (ie. `export SYSROOT=/usr/local` and `export LIBDIR=lib64`).
+ * lib/libcsvf.(so|dll|dylib)
+ * include/libcsvf.h
+ * bin/csv2csvf(.exe)
+ * bin/dispcsvf(.exe)
+ * bin/csview
 
 After that, you can convert csv files to csvf files (`csv2csvf x.csv x.csvf`), display csvf files (`dispcsvf x.csvf`), and jump straight to viewing csv files (`csview x.csv`).
 You can also create C programs that use libcsvf. See the *-cmd.c files for demonstration of use. Compile with `-lcsvf` and put `#include <libcsvf.h>` at the top of your file.
