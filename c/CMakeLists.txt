@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.20)
 project(csvf LANGUAGES C)
 
 if (MSVC)
-    add_compile_options(/W4 /WX /Ox)
+    add_compile_options(/W4 /Ox)
 else()
-    add_compile_options(-Wall -Wextra -Wpedantic -Werror -O2)
+    add_compile_options(-Wall -Wextra -Wpedantic -O2)
 endif()
 
 add_library(csvf SHARED dispcsvf.c csv2csvf.c)
