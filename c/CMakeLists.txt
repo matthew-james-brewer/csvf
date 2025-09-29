@@ -7,6 +7,10 @@ else()
     add_compile_options(-Wall -Wextra -Wpedantic -O2)
 endif()
 
+if(WIN32)
+    set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+endif()
+
 add_library(csvf SHARED dispcsvf.c csv2csvf.c)
 
 add_executable(dispcsvf dispcsvf-cmd.c)
