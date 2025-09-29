@@ -33,6 +33,8 @@ Then, you can display csvf files (`java DispTable x.csvf` in the same directory 
 
 To use the Javascript tools, you must create something that uses them. Some examples are provided in the `examples` folder.
 
+If you're on iOS, you can install `js/csvf1.0.0.sbundle` using [Sunbundler](https://github.com/sbundle/sbundle-repo). Then, in ShortTerm, you can run `dispcsvf.sh x.csvf`.
+
 ## demo output
 
 ```
