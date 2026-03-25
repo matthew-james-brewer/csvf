@@ -10,7 +10,7 @@ int main(int argc, char * argv[]) {
     exit(-1);
   }
 
-  setlocale(LC_ALL, "");
+  setlocale(LC_ALL, "C.utf8");
 
   wchar_t* tab = csvf_char_gen(argv[1]);
 
