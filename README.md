@@ -7,11 +7,13 @@ CSVF is a file format similar to CSV that you can view in a terminal.
 
 ## using the tools
 
-Before you can use anything in the repository, you must clone in and switch to the created directory (`git clone https://github.com/matthew-james-brewer/csvf.git; cd csvf`).
+Before you can use the tools, you need to download the release for your OS and architecture: [Latest Release](https://github.com/matthew-james-brewer/csvf/releases/latest). Then you can skip to the 'after C install' section.
+
+If you want to compile from source or use the js/java editions, you must clone in and switch to the created directory (`git clone https://github.com/matthew-james-brewer/csvf.git; cd csvf`).
 
 ### c
 
-To use the C tools, you must go into the c directory (`cd c`) and run cmake (`mkdir build; cmake -B build; cmake --build build; cmake --install build`). It creates 5 files:
+If you want to compile the C tools, you must go into the c directory (`cd c`) and run cmake (`mkdir build; cmake -B build; cmake --build build; cmake --install build`). It creates 5 files:
 
  * lib/libcsvf.(so|dll|dylib)
  * include/libcsvf.h
@@ -19,7 +21,9 @@ To use the C tools, you must go into the c directory (`cd c`) and run cmake (`mk
  * bin/dispcsvf(.exe)
  * bin/csview
 
-After that, you can convert csv files to csvf files (`csv2csvf x.csv x.csvf`), display csvf files (`dispcsvf x.csvf`), and jump straight to viewing csv files (`csview x.csv`).
+#### after C install
+
+You can now convert csv files to csvf files (`csv2csvf x.csv x.csvf`), display csvf files (`dispcsvf x.csvf`), and jump straight to viewing csv files (`csview x.csv`).
 You can also create C programs that use libcsvf. See the *-cmd.c files for demonstration of use. Compile with `-lcsvf` and put `#include <libcsvf.h>` at the top of your file.
 
 ### java

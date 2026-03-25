@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+# might not work on windows
+
 csv2csvf $1 /tmp/temp.csvf
 dispcsvf /tmp/temp.csvf
 rm /tmp/temp.csvf

@@ -6,7 +6,10 @@
 
 int main(int argc, char * argv[]) {
   if(argc != 2) {
-    puts("\1n\033[1;31mError: invalid argument number\033[0m\n\n\033[4mCommand usage: dispcsvf file.csvf\033[0m\n");
+    puts(
+     "\033[1;31mError: invalid argument number\033[0m"
+     "\n\n\033[4mCommand usage: dispcsvf file.csvf\033[0m"
+     "\n\nLearn about csvf on Github (https://github.com/matthew-james-brewer/csvf).");
     exit(-1);
   }
 

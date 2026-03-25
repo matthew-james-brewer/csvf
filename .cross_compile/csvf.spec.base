@@ -1,0 +1,50 @@
+Summary: CSVF is a file format similar to CSV that you can view in a terminal.
+Name:    csvf
+Version: 1.0.2
+Release: 1%{?dist}
+URL:     https://github.com/matthew-james-brewer/csvf
+License: MPL-2.0
+Source0: https://github.com/matthew-james-brewer/csvf/archive/refs/tags/%{version}.tar.gz
+
+# commented out for build on Debian
+#BuildRequires: gcc
+#BuildRequires: cmake
+
+%define debug_package %{nil}
+%define __strip {{strip}}
+
+%description
+CSVF is a file format similar to CSV that you can view in a terminal.
+
+%prep
+%autosetup
+
+%build
+
+cd c
+cmake -B b -DCMAKE_INSTALL_PREFIX="%{buildroot}/usr"
+cmake --build b
+
+%install
+
+cd c
+cmake --install b
+
+%files
+%license LICENSE
+%{_bindir}/dispcsvf
+%{_bindir}/csv2csvf
+%{_bindir}/csview
+/usr/lib/libcsvf.so
+%{_includedir}/libcsvf.h
+
+%changelog
+
+* Tue Mar 24 2026 Matthew Brewer <mjbrewer17@gmail.com> 1.0.2
+- Fixed small issues, updated README.md, tweaks
+
+* Tue Mar 24 2026 Matthew Brewer <mjbrewer17@gmail.com> 1.0.1
+- Fixed buffer overwrite and added windows support.
+
+* Mon Mar 23 2026 Matthew Brewer <mjbrewer17@gmail.com>
+- Initial build.

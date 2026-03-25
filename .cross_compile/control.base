@@ -1,0 +1,5 @@
+Package: csvf
+Version: 1.0.2
+Maintainer: Matthew Brewer <mjbrewer17@gmail.com>
+Architecture: {{arch}}
+Description: CSVF is a file format similar to CSV that you can view in a terminal.
