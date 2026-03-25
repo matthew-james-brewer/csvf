@@ -125,7 +125,7 @@ wchar_t* csvf_char_gen(char* csvf) {
   }
   rewind(fPtr);
   
-  rowWidth = f0split->length; // start with num columns
+  rowWidth = f0split->length + 4; // start with num columns
   for(int i = 0; i < (f2split->length); i++) {
     rowWidth += cellSize[i]; // and add each cell's size
   }
@@ -175,7 +175,7 @@ wchar_t* csvf_char_gen(char* csvf) {
   
   h1 = vertical(f2split);
   wcscpy(table, h1);
-  table += rowWidth;
+  table += wcslen(h1);
   free(h1);
   
   for(int i = 0; i < 4; i++) { fgets(line, sizeof(line), fPtr); }
